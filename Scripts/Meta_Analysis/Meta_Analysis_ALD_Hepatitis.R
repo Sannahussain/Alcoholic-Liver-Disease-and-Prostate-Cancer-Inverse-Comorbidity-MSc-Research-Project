@@ -8,7 +8,7 @@ ALDhepstudy2 <- read.csv("GSE167308_ALDhepatitis5signatureData.csv")
 library(metapod) 
 library(dplyr) 
 
-#find the overlap of Ensembl gene IDs across the datastets, these are the common genes between studies
+#find the overlap of Ensembl gene symbols across the datastets, these are the common genes between studies
 ALDhepcommon_genes <- Reduce(intersect, list(ALDhepstudy1$Gene_symbol, ALDhepstudy2$Gene_symbol))
 
 #identify how many genes are shared between all studies
@@ -59,7 +59,7 @@ ALDhepgroup_dir <- summarizeGroupedDirection(
 # Adjust for multiple testing - apply FDR corrrection
 ALDhepfdr <- p.adjust(ALDhepmeta_grouped$p.value, method = "fdr")
 
-# Final results table - combine gene IDs, meta-analysis p-values, adjusted p-values and direction of expresion change.
+# Final results table - combine gene symbols, meta-analysis p-values, adjusted p-values and direction of expresion change.
 ALDhepresults <- data.frame(
   Gene_symbol = names(ALDhepmeta_grouped$p.value),
   Combined_P = ALDhepmeta_grouped$p.value,
@@ -81,6 +81,6 @@ nrow(ALDhepresults)
 
 #save the final meta-analysis results as a CSV file.
 write.csv(ALDhepresults, 
-          "C:/Users/ahuss/Desktop/Research Project/ALD Differential analysis/ALD_hepatitis_meta_results.csv",
+          "ALD_hepatitis_meta_results.csv",
           row.names = FALSE)
 
