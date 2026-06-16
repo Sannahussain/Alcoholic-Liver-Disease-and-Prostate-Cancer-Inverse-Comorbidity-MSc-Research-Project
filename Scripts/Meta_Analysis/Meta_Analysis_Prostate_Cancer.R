@@ -10,22 +10,22 @@ library(metapod)
 library(dplyr) 
 
 
-#find the overlap of Ensembl gene IDs across the datastets, these are the common genes between studies
-PCcommon_genes <- Reduce(intersect, list(PCstudy1$Ensembl_ID, PCstudy2$Ensembl_ID, PCstudy3$Ensembl_ID)) 
+#find the overlap of gene symbols across the datastets, these are the common genes between studies
+PCcommon_genes <- Reduce(intersect, list(PCstudy1$Gene_symbol, PCstudy2$Gene_symbol, PCstudy3$Gene_symbol)) 
 
 #identify how many genes are shared between all studies
 length(PCcommon_genes)
 
 #remove genes not present in all studies so only common genes remain in each dataset
-PCstudy1 <- PCstudy1[PCstudy1$Ensembl_ID %in% PCcommon_genes, ] 
-PCstudy2 <- PCstudy2[PCstudy2$Ensembl_ID %in% PCcommon_genes, ] 
-PCstudy3 <- PCstudy3[PCstudy3$Ensembl_ID %in% PCcommon_genes, ]
+PCstudy1 <- PCstudy1[PCstudy1$Gene_symbol %in% PCcommon_genes, ] 
+PCstudy2 <- PCstudy2[PCstudy2$Gene_symbol %in% PCcommon_genes, ] 
+PCstudy3 <- PCstudy3[PCstudy3$Gene_symbol %in% PCcommon_genes, ]
 
 
 #reoder each dataset so they appear in the same order - so the datasets align correctly for meta-analysis
-PCstudy1 <- PCstudy1[match(PCcommon_genes, PCstudy1$Ensembl_ID), ]
-PCstudy2 <- PCstudy2[match(PCcommon_genes, PCstudy2$Ensembl_ID), ]
-PCstudy3 <- PCstudy3[match(PCcommon_genes, PCstudy3$Ensembl_ID), ]
+PCstudy1 <- PCstudy1[match(PCcommon_genes, PCstudy1$Gene_symbol), ]
+PCstudy2 <- PCstudy2[match(PCcommon_genes, PCstudy2$Gene_symbol), ]
+PCstudy3 <- PCstudy3[match(PCcommon_genes, PCstudy3$Gene_symbol), ]
 
 
 #store all the studies in a list for easier processing
@@ -63,7 +63,7 @@ PCgroup_dir <- summarizeGroupedDirection(
 # Adjust for multiple testing - apply FDR correction
 PCfdr <- p.adjust(PCmeta_grouped$p.value, method = "fdr")
 
-# Final results table - combine gene IDs, meta-analysis p-values, adjusted p-values and direction of expresion change.
+# Final results table - combine gene symbols, meta-analysis p-values, adjusted p-values and direction of expresion change.
 PCresults <- data.frame(
   Gene_symbol = names(PCmeta_grouped$p.value),
   Combined_P = PCmeta_grouped$p.value,
