@@ -14,9 +14,7 @@ for (f in files) {
 
   df <- fread(f)
 
-  df_clean <- df[, .(
-    CHR, SNP, POS, A1, A2, N, AF1, BETA, P
-  )]
+df_clean <- df[, !c("T", "SE_T", "P_noSPA", "CONVERGE"), with = FALSE]
 
   out <- gsub("males_", "clean_males_", f)
 
@@ -48,9 +46,7 @@ for (f in files) {
 
   df <- fread(f)
 
-  df_clean <- df[, .(
-    CHR, SNP, POS, A1, A2, N, AF1, BETA, P
-  )]
+ df_clean <- df[, !c("T", "SE_T", "P_noSPA", "CONVERGE"), with = FALSE]
 
   out <- gsub("males_", "clean_males_", f)
 
