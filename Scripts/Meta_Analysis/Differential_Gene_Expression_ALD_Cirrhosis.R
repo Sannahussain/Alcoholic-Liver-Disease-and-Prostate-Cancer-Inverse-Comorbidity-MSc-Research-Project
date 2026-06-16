@@ -14,5 +14,5 @@ View(Cirrhosisstudy1)
 
 #save the Differential Gene expression table
 write.csv(Cirrhosisstudy1, 
-          "C:/Users/ahuss/Desktop/Research Project/ALD Differential analysis/ALD_Cirrhosis_DE_results.csv",
+          "ALD Differential analysis/ALD_Cirrhosis_DE_results.csv",
           row.names = FALSE)
