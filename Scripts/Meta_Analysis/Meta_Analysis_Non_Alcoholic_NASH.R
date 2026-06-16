@@ -9,7 +9,7 @@ library(metapod)
 library(dplyr) 
 
 
-#find the overlap of Ensembl gene IDs across the datastets, these are the common genes between studies
+#find the overlap of Ensembl gene symbols across the datastets, these are the common genes between studies
 NASHcommon_genes <- Reduce(intersect, list(NASHstudy1$Gene_symbol, NASHstudy2$Gene_symbol)) 
 
 #identify how many genes are shared between all studies
@@ -61,7 +61,7 @@ NASHgroup_dir <- summarizeGroupedDirection(
 NASHfdr <- p.adjust(NASHmeta_grouped$p.value, method = "fdr")
 
 
-# Final results table - combine gene IDs, meta-analysis p-values, adjusted p-values and direction of expresion change.
+# Final results table - combine gene symbols, meta-analysis p-values, adjusted p-values and direction of expresion change.
 NASHresults <- data.frame(
   Gene_symbol = names(NASHmeta_grouped$p.value),
   Combined_P = NASHmeta_grouped$p.value,
@@ -83,5 +83,5 @@ nrow(NASHresults)
 
 #save the final meta-analysis results as a CSV file.
 write.csv(NASHresults, 
-          "C:/Users/ahuss/Desktop/Research Project/ALD Differential analysis/NON-ALD_NASH_meta_results.csv",
+          "NON-ALD_NASH_meta_results.csv",
           row.names = FALSE)
