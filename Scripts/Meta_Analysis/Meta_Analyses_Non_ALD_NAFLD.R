@@ -8,7 +8,7 @@ NAFLDstudy2 <- read.csv("GSE260666_NON-ALD_NAFLD4signatureData.csv")
 library(metapod) 
 library(dplyr) 
 
-#find the overlap of Ensembl gene IDs across the datastets, these are the common genes between studies
+#find the overlap of Ensembl gene symbols across the datastets, these are the common genes between studies
 NAFLDcommon_genes <- Reduce(intersect, list(NAFLDstudy1$Gene_symbol, NAFLDstudy2$Gene_symbol)) 
 
 #identify how many genes are shared between all studies
@@ -59,7 +59,7 @@ NAFLDgroup_dir <- summarizeGroupedDirection(
 NAFLDfdr <- p.adjust(NAFLDmeta_grouped$p.value, method = "fdr")
 
 
-# Final results tablee - combine gene IDs, meta-analysis p-values, adjusted p-values and direction of expresion change.
+# Final results tablee - combine gene symbols, meta-analysis p-values, adjusted p-values and direction of expresion change.
 NAFLDresults <- data.frame(
   Gene_symbol = names(NAFLDmeta_grouped$p.value),
   Combined_P = NAFLDmeta_grouped$p.value,
@@ -81,5 +81,5 @@ nrow(NAFLDresults)
 
 #save the final meta-analysis results as a CSV file.
 write.csv(NAFLDresults, 
-          "C:/Users/ahuss/Desktop/Research Project/ALD Differential analysis/NON-ALD_NAFLD_meta_results.csv",
+          "NON-ALD_NAFLD_meta_results.csv",
           row.names = FALSE)
