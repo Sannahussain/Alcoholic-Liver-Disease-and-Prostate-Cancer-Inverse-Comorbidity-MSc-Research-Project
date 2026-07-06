@@ -1,0 +1,14 @@
+# Sample overlap matrix used for LAVA analysis
+# This file specifies the degree of sample overlap between GWAS datasets.
+# Rows/columns represent traits:
+#   PC  = Prostate Cancer GWAS
+#   ALD = Alcoholic Liver Disease GWAS
+# Values represent proportion of shared samples (0–1):
+#   1 = complete overlap (same individuals)
+#   0 = no overlap
+# Assumption for this table is there is Full sample overlap between PC and ALD GWAS (UK Biobank cohort)
+# This may affect standard errors and covariance estimation in LAVA.
+       
+       PC      ALD
+PC      1       1
+ALD     1       1
