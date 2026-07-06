@@ -22,9 +22,25 @@ This repository contains scripts used to perform the transcriptomic and genetic 
 - Python (for LDSC preprocessing)
 - HPC environment
 
- # Data Availability:
-  - This project uses data from publicly available GREIN Datasets, Prostate Cancer (datasets GSE104131, GSE22260, GSE133626), liver disease (datasets GSE142218, GSE167308, GSE126848, GSE260666)
-- This project also uses UK Biobank data, which is not publicly available due to access restrictions.
+ # Data Sources:
+  - Differemtial gene expression and meta analyses were performed using publicly available RNA sequencing datasets from the GREIN database.
+# Prostate Cancer datasets
+# GREIN ID	          Description
+  GSE104131	         RNA sequencing of prostate cancer and matched normal tissue from African                         American and European American individuals (16 tumour, 16 control samples)
+  GSE22260	          Comparative transcriptomic analysis of prostate cancer and matched normal                        tissue (20 tumour, 10 control samples)
+  GSE133626	         Patient matched prostate cancer and normal tissue RNA sequencing (30                             tumour, 30 control samples)
+
+# Liver Disease datasets
+# GREIN ID           Description
+  GSE142218	         Alcoholic hepatitis (5 cases, 5 controls)
+  GSE167308	         Alcoholic cirrhosis and alcoholic hepatitis (7 cirrhosis, 7 hepatitis, 5                         controls)
+  GSE126848	         Non-alcoholic fatty liver disease (NAFLD) and non-alcoholic steatohepatitis                      (NASH) (15 NAFLD, 16 NASH, 14 controls) 
+  GSE260666	         NAFLD and NASH (6 NAFLD, 4 NASH, 6 controls)
+
+All RNA-seq datasets were used to generate separate signature IDs for each phenotype for affected vs control samples before being used in downstream meta analysis and inverse gene level comparison workflows.
+
+ # UK Biobank
+UK Biobank data, which is not publicly available due to access restriction, was used for genetic epidemiology analyses including GWAS, LDSC and LAVA analyses.
 - Summary statistics and intermediate files are generated on HPC and are not included in this repository. 
 
 
