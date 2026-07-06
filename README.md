@@ -37,10 +37,16 @@ Differemtial gene expression and meta analyses were performed using publicly ava
 
 All RNA-seq datasets were used to generate separate signature IDs for each phenotype for affected vs control samples before being used in downstream meta analysis and inverse gene level comparison workflows.
 
- # UK Biobank
-UK Biobank data, which is not publicly available due to access restriction, was used for genetic epidemiology analyses including GWAS, LDSC and LAVA analyses.
-- Summary statistics and intermediate files are generated on HPC and are not included in this repository. 
+## UK Biobank phenotype preprocessing
+UK Biobank individual genotype and phenotype data were used for genetic epidemiology analyses, including GWAS, linkage disequilibrium score regression (LDSC) and local genetic correlation analysis (LAVA). Due to UK Biobank restriction, raw genotype amd participant level phenotype data cannot be included within this repository.
+- Phenotype files for both ALD and PC were generated using R scripts wothin the HPC environment, included in the scripts repository. individuals were classified as cases or controls based on the predefined phenotype criteria. Binary phenotye files were generated, where affected individuals were assigned a value of 1 and unaffected were assigned a value of 0.
+- Covariate files containing age and the first five genetic principal components (PCs) were generated for adjustment of population structure and potential confounding during GWAS analyses.
 
+The following derived files were generated on the HPC environment but are not included in this repository due to data protection restrictions:
+- `ald_pheno.txt` – ALD case-control phenotype file
+- `pc_pheno.txt` – Prostate Cancer case-control phenotype file
+- `ageattend5pcs.txt` – age and principal component covariate file
+- `males.txt` – autosomal genotype sample file for male participants
+- `males_X.txt` – X chromosome genotype sample file for male participants
 
-
-
+#
