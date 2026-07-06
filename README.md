@@ -22,7 +22,7 @@ This repository contains scripts used to perform the transcriptomic and genetic 
 - Python (for LDSC preprocessing)
 - HPC environment
 
-  # Data Availability:
+ # Data Availability:
   - This project uses data from publicly available GREIN Datasets, Prostate Cancer (datasets GSE104131, GSE22260, GSE133626), liver disease (datasets GSE142218, GSE167308, GSE126848, GSE260666)
 - This project also uses UK Biobank data, which is not publicly available due to access restrictions.
 - Summary statistics and intermediate files are generated on HPC and are not included in this repository. 
