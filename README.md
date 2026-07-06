@@ -25,15 +25,15 @@ This repository contains scripts used to perform the transcriptomic and genetic 
  # Data Sources:
   - Differemtial gene expression and meta analyses were performed using publicly available RNA sequencing datasets from the GREIN database.
 # Prostate Cancer datasets
-  GSE104131	         RNA sequencing of prostate cancer and matched normal tissue from African American and European American individuals (16 tumour, 16 control samples)
-  GSE22260	          Comparative transcriptomic analysis of prostate cancer and matched normal tissue (20 tumour, 10 control samples)
-  GSE133626	         Patient matched prostate cancer and normal tissue RNA sequencing (30 tumour, 30 control samples)
+  Dataset GSE104131 - RNA sequencing of prostate cancer and matched normal tissue from African American and European American individuals (16 tumour, 16 control samples)
+  Dataset GSE22260 - Comparative transcriptomic analysis of prostate cancer and matched normal tissue (20 tumour, 10 control samples)
+  Dataset GSE133626	- Patient matched prostate cancer and normal tissue RNA sequencing (30 tumour, 30 control samples)
 
 # Liver Disease datasets
-  GSE142218	         Alcoholic hepatitis (5 cases, 5 controls)
-  GSE167308	         Alcoholic cirrhosis and alcoholic hepatitis (7 cirrhosis, 7 hepatitis, 5 controls)
-  GSE126848	         Non-alcoholic fatty liver disease (NAFLD) and non-alcoholic steatohepatitis (NASH) (15 NAFLD, 16 NASH, 14 controls) 
-  GSE260666	         NAFLD and NASH (6 NAFLD, 4 NASH, 6 controls)
+  Dataset GSE142218 - Alcoholic hepatitis (5 cases, 5 controls)
+  Dataset GSE167308 - Alcoholic cirrhosis and alcoholic hepatitis (7 cirrhosis, 7 hepatitis, 5 controls)
+  Dataset GSE126848 - Non-alcoholic fatty liver disease (NAFLD) and non-alcoholic steatohepatitis (NASH) (15 NAFLD, 16 NASH, 14 controls) 
+  Dataset GSE260666 - NAFLD and NASH (6 NAFLD, 4 NASH, 6 controls)
 
 All RNA-seq datasets were used to generate separate signature IDs for each phenotype for affected vs control samples before being used in downstream meta analysis and inverse gene level comparison workflows.
 
