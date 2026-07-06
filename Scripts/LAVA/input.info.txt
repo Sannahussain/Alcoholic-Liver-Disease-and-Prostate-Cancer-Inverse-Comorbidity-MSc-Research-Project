@@ -1,0 +1,10 @@
+# This table defines the phenotype-level metadata used for LDSC / downstream analyses.
+# Each row corresponds to a phenotype with:
+# - number of cases and controls used in the GWAS
+# - path to the formatted summary statistics file
+# File paths are relative to the project directory to ensure reproducibility
+# across different computing environments (e.g. HPC, local machine, GitHub clones)
+
+phenotype       cases   controls        filename
+"PC"    16645   194590  "/scratch/prj/dtr_incom/sanna/males_pc.sumstats"
+"ALD"   1495    209740  "/scratch/prj/dtr_incom/sanna/males_ald.sumstats"
