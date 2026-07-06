@@ -25,13 +25,13 @@ This repository contains scripts used to perform the transcriptomic and genetic 
  # Data Sources:
   - Differemtial gene expression and meta analyses were performed using publicly available RNA sequencing datasets from the GREIN database.
 # Prostate Cancer datasets
-# GREIN ID	          Description
+  GREIN ID	          Description
   GSE104131	         RNA sequencing of prostate cancer and matched normal tissue from African American and European American individuals (16 tumour, 16 control samples)
   GSE22260	          Comparative transcriptomic analysis of prostate cancer and matched normal tissue (20 tumour, 10 control samples)
   GSE133626	         Patient matched prostate cancer and normal tissue RNA sequencing (30 tumour, 30 control samples)
 
 # Liver Disease datasets
-# GREIN ID           Description
+  GREIN ID           Description
   GSE142218	         Alcoholic hepatitis (5 cases, 5 controls)
   GSE167308	         Alcoholic cirrhosis and alcoholic hepatitis (7 cirrhosis, 7 hepatitis, 5 controls)
   GSE126848	         Non-alcoholic fatty liver disease (NAFLD) and non-alcoholic steatohepatitis (NASH) (15 NAFLD, 16 NASH, 14 controls) 
