@@ -49,4 +49,39 @@ The following derived files were generated on the HPC environment but are not in
 - `males.txt` – autosomal genotype sample file for male participants
 - `males_X.txt` – X chromosome genotype sample file for male participants
 
-#
+# GWAS workflow
+Genome wide association analyses were performed using male UK Biobank participants to reduce biological heterogeneity between sexes. Autosomal chromosomes (1–22) and chromosome X were analysed separately.
+
+GWAS were performed using the fastGWA mixed linear model implemented in GCTA v1.94.1. Age and the first five genetic principal components were included as covariates to control for population stratification.
+
+Analyses were performed using SLURM batch scripts on the HPC environment. Chromosome-specific summary statistics were merged and cleaned before downstream analyses.
+
+# Linkage Disequilibrium Score Regression (LDSC)
+- (LDSC analyses were performed using LDSC software (1.0.1) package in the HPC, cloned from the GitHub repository and executed using Python based scripts, including munge_sumstats.py for summary statistics pre-processing and ldsc.py for SNP heritability estimation. )
+- 
+LDSC was used to estimate SNP-based heritability and genome-wide genetic correlation between ALD and PC.
+
+GWAS summary statistics were formatted using `munge_sumstats.py` before analysis. SNP heritability was estimated using univariate LDSC and genetic correlation was estimated using bivariate LDSC.
+
+The European LD reference panel and HapMap3 SNP list (`w_hm3.snplist`) were used for LD score regression analyses.
+
+Required LDSC resources:
+- LDSC software package
+- European LD score reference panel (`eur_w_ld_chr`)
+- HapMap3 SNP list (`w_hm3.snplist`)
+
+These reference files are not included in this repository and should be obtained from the LDSC repository 
+
+# Local Genetic Correlation Analysis (LAVA)
+
+LAVA was used to investigate local genetic correlation between ALD and PC across genomic regions.
+
+The analysis used:
+- GWAS summary statistics
+- UK Biobank LD reference panel
+- genomic locus definition file
+- phenotype information file
+- sample overlap matrix
+
+The UK Biobank LD reference panel and locus definition file were generated/obtained separately and are not included due to file size and data restrictions.
+
