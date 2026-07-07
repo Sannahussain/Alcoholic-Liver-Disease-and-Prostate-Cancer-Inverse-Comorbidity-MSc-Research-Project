@@ -1,4 +1,5 @@
-# This list of genes are the common genes between PC and ALD  phenotypes (Hepatitis and Cirrhosis), this list was the input for the PANTHER pathway analysis to identify which biological pathways these genes are part of and the enrichment of these genes in athways.
+# This list of genes are the common genes between PC and ALD  phenotypes (Hepatitis and Cirrhosis), 
+this list was the input for the PANTHER pathway analysis to identify which biological pathways these genes are part of and the enrichment of these genes in athways.
 
 ACKR3
 ACSL4
