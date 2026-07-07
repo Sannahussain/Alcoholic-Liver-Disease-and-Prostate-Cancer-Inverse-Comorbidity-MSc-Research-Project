@@ -1,4 +1,4 @@
-Analysis	Trait	Estimate	p-value
-Univariate	PC	PC h2 = 8.79808e-05	0.00147382
-Univariate	ALD	h2 = 4.45517e-05	0.035555
-Bivariate	PC vs ALD	Rho = - 0.20052	NA
+Analysis,Trait,Estimate,p-value
+Univariate,PC,h2 = 8.79808e-05,0.00147382
+Univariate,ALD,h2 = 4.45517e-05,0.035555
+Bivariate,PC vs ALD,Rho = - 0.20052,NA
