@@ -9,7 +9,7 @@ Summary statistics were used for:
   - LAVA
   - Manhattan Plots
 
-Raw GWAS output files are not included due to dara access restrictions, all 22 chromosome and X chromosome GWAS were merged and cleaned to contain colums:
+Raw GWAS output files are not included due to data access restrictions, all 22 chromosome and X chromosome GWAS were merged and cleaned to contain colums:
   - CHR
   - SNP
   - POS
