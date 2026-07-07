@@ -58,7 +58,7 @@ Analyses were performed using SLURM batch scripts on the HPC environment. Chromo
 
 # Linkage Disequilibrium Score Regression (LDSC)
 - (LDSC analyses were performed using LDSC software (1.0.1) package in the HPC, cloned from the GitHub repository and executed using Python based scripts, including munge_sumstats.py for summary statistics pre-processing and ldsc.py for SNP heritability estimation. )
-- 
+  
 LDSC was used to estimate SNP-based heritability and genome-wide genetic correlation between ALD and PC.
 
 GWAS summary statistics were formatted using `munge_sumstats.py` before analysis. SNP heritability was estimated using univariate LDSC and genetic correlation was estimated using bivariate LDSC.
